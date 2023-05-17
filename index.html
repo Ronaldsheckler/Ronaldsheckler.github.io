@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+.centered {
+  position: absolute;
+  top:  70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+}
+.centered1 {
+  position: absolute;
+  top:  80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:  white;
+  font-size: 13px;
+}
+
+.centered2 {
+  position: absolute;
+  top:  85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:  white;
+  font-size: 40px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+ {
+  opacity: 0.1;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 960px;
+  height: 70vh;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; /* set opacity to 80% */
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.read-more {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.audio-wrapper {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+
+</style>
+
+<script>
+  function displayTime() {
+      var currentTime = new Date();
+      var hours = currentTime.getHours();
+      var minutes = currentTime.getMinutes();
+      var seconds = currentTime.getSeconds();
+      var ampm = hours >= 12 ? 'PM' : 'AM';
+
+      // convert hours from 24-hour format to 12-hour format
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+
+      // add leading zero to minutes and seconds
+      if (minutes < 10) {
+          minutes = "0" + minutes;
+      }
+      if (seconds < 10) {
+          seconds = "0" + seconds;
+      }
+
+      // display the clock
+      var clockDiv = document.getElementById('clock');
+      clockDiv.innerText = hours + ":" + minutes + ":" + seconds + " " + ampm;
+  }
+
+</script>
+
+<script>
+  setInterval(displayTime, 1000);
+</script>
+
+<body style="background-image: url('images/background.JPG');"></body>
+    <head>
+      <title>Home</title>
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="brand-title">My Personal Website</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biodata.html">About</a></li>
+            <li><a href="family.html">Family</a></li>
+	    <li><a href="education.html">Education</a></li>
+	    <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </nav>
+<div class="audio-wrapper">
+  <audio src="audio/inthenight.mp3" controls autoplay loop>
+  </audio>
+</div>
+<div class="card-container">
+  <div class="card">
+    <div class="card-image" style="background-image: url('images/mypic.jpg');"></div>
+    <div class="card-content">
+      <h2>About</h2>
+      <p>About my life</p>
+      <a href="biodata.html" class="read-more">Read More</a>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-image" style="background-image: url('images/family.jpg');"></div>
+    <div class="card-content">
+      <h2>Family</h2>
+      <p>All my family member</p>
+      <a href="family.html" class="read-more">Read More</a>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-image" style="background-image: url('images/kedah.jpg');"></div>
+    <div class="card-content">
+      <h2>Education</h2>
+      <p>All my education and achievement</p>
+      <a href="education.html" class="read-more">Read More</a>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-image" style="background-image: url('images/friend.JPG');"></div>
+    <div class="card-content">
+      <h2>Gallery</h2>
+      <p>Random pictures and video</p>
+      <a href="gallery.html" class="read-more">Read More</a>
+    </div>
+  </div>
+</div>
+
+<div class="centered"><marquee loop="5" behavior="slide" scrollamount="20">Welcome To My Personal Website</marquee> </div>
+  <div class="centered1">This is my homepage</div>
+  <div class="centered2" id="clock"></div>
+    </body>
+</html>

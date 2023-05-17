@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+body {
+   background-color: black;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+.center {
+  display: block;
+  margin-top:15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1280;
+  height: 720;
+}
+heading {
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        color: white;
+    }
+h1{
+ color: white;
+}
+    p {
+      color: white;
+      font-size: 20px;
+    }
+text-align: center;
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+}
+img {
+	margin: 10px;
+	width: 500px;
+	height: auto;
+}
+
+</style>
+
+    <head>
+      <title>Gallery</title>
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="brand-title">My Personal Website</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biodata.html">About</a></li>
+            <li><a href="family.html">Family</a></li>
+	    <li><a href="education.html">Education</a></li>
+	    <li><a class="active" href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </nav>
+<center>
+  <heading>Gallery</heading>
+  <p>Random pictures and video :p</p>
+<br>
+<br>
+<h1>My friends</h1>
+	<div class="container">
+		<img src="images/penangtrip.jpg">
+		<img src="images/friend.JPG">
+		<img src="images/afteraacr.JPG">
+	</div>
+<div class="container">
+		<img src="images/raya.jpg">
+		<img src="images/aftertest.JPG">
+		<img src="images/ioi.jpg">
+	</div>
+<div class="container">
+		<img src="images/johnwick.JPG">
+		<img src="images/meow.jpg">
+		<img src="images/theboys.jpg">
+	</div>
+<div class="container">
+		<img src="images/goku.jpg" align="top">
+		<video src="video/VALORANT.mp4" controls>
+	</div>
+<div class="container">
+                <video src="video/bowlingschool.mov" controls>
+	</div>
+    </body>
+</html>

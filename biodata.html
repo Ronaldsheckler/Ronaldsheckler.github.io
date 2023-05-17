@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+body {
+   background-color: black;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+.center {
+  display: block;
+  margin-top:15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1280;
+  height: 720;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+  background-color: #bdbab5;
+}
+heading {
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        color: white;
+    }
+    p {
+      color: white;
+    }
+
+.audio-wrapper {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+</style>
+    <head>
+      <title>About me</title>
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="brand-title">My Personal Website</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="biodata.html">About</a></li>
+            <li><a href="family.html">Family</a></li>
+	    <li><a href="education.html">Education</a></li>
+	    <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+      </nav>
+<center>
+  <heading>About me</heading>
+ 
+    <img src="images/mypic.jpg"  class="center"> 
+
+</center>
+<table>
+        <tr>
+          <th>Name</th>
+          <td>Ronald Bega Bin Naising</td>
+        </tr>
+        <tr>
+          <th>Birth Date</th>
+          <td>30th November 2002</td>
+        </tr>
+        <tr>
+          <th>Birth Place</th>
+          <td>Miri, Sarawak</td>
+        </tr>
+        <tr>
+          <th>Address</th>
+          <td>No 5022, Desa Indah 3, Bandar Baru Permyjaya, 98000 Miri, Sarawak</td>
+        </tr>
+          <tr>
+            <th>Hobby</th>
+            <td>Playing Games, Editing Video, Bowling</td>
+          </tr>
+      </table>
+<br>
+<br>
+<br>
+<center>
+    <heading>Experiences</heading>
+    <p>Click on any of the images to see my more of my work experience</p>
+    <br>
+    <br>
+  <a href="experiences.html">
+    <img src="images/working.JPG" width="auto"  height="480p" >
+  </a>
+  </center>
+    </body>
+</html>
